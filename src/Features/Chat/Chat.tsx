@@ -16,7 +16,7 @@ export default function Chat({
   const chatId: number[] = getId();
 
   return (
-    <main className="messageContainer">
+    <main id="messageContainer">
       {messages.map((message, index) => (
         <div
           key={index}

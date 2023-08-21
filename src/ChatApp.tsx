@@ -4,7 +4,7 @@ import { IdData, Message, MessageData } from './Features/type/type';
 import IdList from './Features/IdList/IdList';
 import Chat from './Features/Chat/Chat';
 
-const ChatApp: React.FC = () => {
+function ChatApp(): JSX.Element {
   const [selectedId, setSelectedId] = useState<number | null>(null);
   const [ids, setIds] = useState<number[]>([]);
   const [messages, setMessages] = useState<Message[]>([]);
@@ -33,6 +33,6 @@ const ChatApp: React.FC = () => {
       <Chat messages={messages} />
     </div>
   );
-};
+}
 
 export default ChatApp;

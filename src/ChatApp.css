@@ -1,6 +1,7 @@
 * {
   background-color: rgb(27, 40, 60);
 }
+
 #chatContainer {
   display: flex;
   width: 100vw;
@@ -9,64 +10,74 @@
 
 #idList {
   position: fixed;
+  color: rgb(255, 255, 255);
+  border-right: 1px solid #cccccc43;
+  border-left: 1px solid #cccccc43;
   max-width: 300px;
   min-width: 300px;
   height: 100vh;
-  text-align: center;
   padding: 30px 0px;
-  border-right: 1px solid #cccccc43;
-  border-left: 1px solid #cccccc43;
-  color: rgb(255, 255, 255);
+  text-align: center;
 }
 
-.messageContainer {
-  margin-left: 300px;
-  padding: 20px;
+#messageContainer {
   display: flex;
   flex-direction: column;
+  margin-left: 300px;
+  padding: 20px;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
+nav ul {
   margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-li {
-  cursor: pointer;
-  padding: 15px;
-  border-bottom: 1px solid #cccccc43;
+nav ul li {
   border-top: 1px solid #cccccc43;
+  border-bottom: 1px solid #cccccc43;
   text-align: center;
+  padding: 15px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
 }
 
-.message {
-  padding: 10px;
-  margin: 25px 0;
+nav ul li.active {
+  background-color: rgba(211, 211, 211, 0.164);
+}
+
+main div.message {
+  color: rgb(255, 255, 255);
   border-radius: 10px;
   max-width: 70%;
+  margin: 25px 0;
+  padding: 10px;
 }
 
-.system {
-  background-color: rgba(39, 57, 100, 0.38);
+main div.system {
+  background-color: rgba(22, 76, 203, 0.838);
+  flex-wrap: wrap;
+  max-width: 50%;
   text-align: center;
   margin: 10px auto;
-  color: rgb(255, 255, 255);
 }
 
-.user {
-  background-color: #dbf5b4;
+main div.user {
+  background-color: #688340;
+  flex-wrap: wrap;
   align-self: flex-end;
+  max-width: 50%;
 }
 
-.other {
+main div.other {
   background-color: rgb(39, 57, 84);
-  color: rgb(255, 255, 255);
+  flex-wrap: wrap;
   align-self: flex-start;
+  max-width: 50%;
 }
 
 .author {
-  color: tomato;
+  color: rgba(255, 99, 71, 0.85);
   font-weight: bolder;
 }
 
